@@ -452,7 +452,9 @@ MediumEditor.extensions = {};
         isFF: (navigator.userAgent.toLowerCase().indexOf('firefox') > -1),
 
         // http://stackoverflow.com/a/11752084/569101
-        isMac: (window.navigator.platform.toUpperCase().indexOf('MAC') >= 0),
+        // window.navigator.platform is deprecated and unavailable in latest Chrome update
+        // isMac: (window.navigator.platform.toUpperCase().indexOf('MAC') >= 0),
+        isMac: false,
 
         // https://github.com/jashkenas/underscore
         // Lonely letter MUST USE the uppercase code
